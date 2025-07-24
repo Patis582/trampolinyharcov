@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import logo from "../public/images/logo.jpg";
 import Image from "next/image";
 
 const NavBar = () => {
@@ -12,12 +11,12 @@ const NavBar = () => {
   };
 
   return (
-    <nav className={`bg-white shadow-lg rounded-2xl relative mx-8 sm:mx-16 lg:mx-32 z-50 transition-rounded duration-300 ease-in-out ${isMenuOpen ? "rounded-none" : "rounded-b-2xl"}`}>
+    <nav className={`bg-white shadow-lg rounded-2xl relative  sm:mx-16 lg:mx-32 z-50 transition-rounded duration-300 ease-in-out ${isMenuOpen ? "rounded-none" : "rounded-2xl"}`}>
       <div className="px-6 md:px-8 py-2">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Image src={logo} alt={"logo"} width={"45"} />
+            <Image src="/images/logo.jpg" alt={"logo"} width={"45"} height={"45"}/>
           </div>
 
           {/* Desktop Menu */}

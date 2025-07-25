@@ -4,13 +4,13 @@ import React from "react";
 const OProjektu = () => {
   return (
     <div className="flex flex-col lg:flex-row lg:px-32 gap-8">
-      <div className="flex flex-col px-8 sm:px-16 md:px-32 lg:px-0 gap-8">
+      <div className="flex flex-col px-8 sm:px-16 md:px-32 lg:px-0 gap-8 flex-1">
         <Image
           src={"/images/hero-background.jpg"}
           alt="fotka"
           width={400}
           height={800}
-          className="w-full max-h-45 object-cover rounded-2xl"
+          className="w-full object-cover rounded-2xl"
         />
         <div className="h-full flex flex-col justify-center items-center bg-secondary rounded-2xl p-8">
           <Image src={"/vercel.svg"} alt="ikona" width={82} height={82} />
@@ -28,13 +28,13 @@ const OProjektu = () => {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-col-reverse px-8 sm:px-16 md:px-32 lg:px-0 gap-8">
+      <div className="flex flex-col lg:flex-col-reverse px-8 sm:px-16 md:px-32 lg:px-0 gap-8 flex-1">
         <Image
           src={"/images/hero-background.jpg"}
           alt="fotka"
           width={400}
           height={800}
-          className="w-full max-h-45 object-cover rounded-2xl"
+          className="w-full object-cover rounded-2xl"
         />
         <div className="h-full flex flex-col justify-center items-center bg-secondary rounded-2xl p-8">
           <Image src={"/vercel.svg"} alt="ikona" width={82} height={82} />
@@ -58,13 +58,13 @@ const OProjektu = () => {
         </div>
       </div>
 
-      <div className="flex flex-col px-8 sm:px-16 md:px-32 lg:px-0 gap-8">
+      <div className="flex flex-col px-8 sm:px-16 md:px-32 lg:px-0 gap-8 flex-1">
         <Image
           src={"/images/hero-background.jpg"}
           alt="fotka"
           width={400}
           height={800}
-          className="w-full max-h-45 object-cover rounded-2xl"
+          className="w-full object-cover rounded-2xl"
         />
         <div className="h-full flex flex-col justify-center items-center bg-secondary rounded-2xl p-8">
           <Image src={"/vercel.svg"} alt="ikona" width={82} height={82} />

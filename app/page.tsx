@@ -1,5 +1,6 @@
 import CoToJe from "./components/sections/CoToJe";
 import Hero from "./components/sections/Hero";
+import OProjektu from "./components/sections/OProjektu";
 import NavBar from "./NavBar";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
           <Hero />
         </div>
         <CoToJe />
+        <OProjektu/>
       </div>
     </>
   );

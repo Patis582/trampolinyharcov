@@ -1,5 +1,8 @@
 @import "tailwindcss";
 @plugin "daisyui";
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
 
 :root {
   --background: #ffffff;
@@ -13,7 +16,8 @@
   --color-primary: #7ab2b2;
   --font-hind: var(--font-hind);
   --font-montserrat: var(--font-montserrat);
-  --color-secondary: var(--secondary)
+  --color-secondary: var(--secondary);
+
 }
 
 html {

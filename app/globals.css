@@ -25,7 +25,9 @@ html {
 }
 
 body {
-  background: var(--background);
+  background-image: url("/images/lines-background.svg");
+  background-repeat: repeat;
+  background-attachment: scroll;
   color: var(--foreground);
   font-family: var(--font-hind), "Hind", sans-serif;
   font-size: 14px;

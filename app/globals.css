@@ -4,6 +4,7 @@
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';
 
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -77,4 +78,24 @@ h4 {
   body {
     font-size: 16px;
   }
+}
+
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  color: #7ab2b2;
+}
+
+.swiper .swiper-button-next:hover,
+.swiper .swiper-button-prev:hover {
+  color: #7ab2b2;
+}
+
+.swiper .swiper-pagination-bullet {
+  background: white;
+  opacity: 0.5;
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background: #7ab2b2;
+  opacity: 1;
 }

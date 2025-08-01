@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 
 import { client, urlFor } from "@/sanity/lib/client";
 import { useEffect, useState } from "react";
+import Button from "../Button";
 
 const Aktuality = () => {
   const [aktuality, setAktuality] = useState([]);
@@ -22,7 +23,7 @@ const Aktuality = () => {
   }, []);
 
   return (
-    <div className="max-w-4xl mx-auto p-4">
+    <div className="max-w-4xl mx-auto p-8 min-w-0 w-full">
       <Swiper
         cssMode={true}
         navigation={true}
@@ -34,27 +35,27 @@ const Aktuality = () => {
       >
         {aktuality.map((aktualita: any) => (
           <SwiperSlide key={aktualita._id}>
-            <div className="h-64 flex items-center justify-center text-white text-xl font-bold bg-cover bg-center" style={{backgroundImage: `url(${urlFor(aktualita.image).url()})`}}>
-              {aktualita.title || 'Bez názvu'}
+            <div
+              className="h-96 flex items-start justify-end flex-col gap-4 text-white bg-cover bg-center px-12 md:px-16 py-8"
+              style={{
+                backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.3)),
+                url(${urlFor(aktualita.image).url()})`,
+              }}
+            >
+              <div>
+                <h3>{aktualita.title || "Bez názvu"}</h3>
+                <p className="line-clamp-4 lg:line-clamp-3">{aktualita.text}</p>
+              </div>
+              <Button href="#" filled={false} textWhite>
+                Více
+              </Button>
             </div>
           </SwiperSlide>
         ))}
-        <SwiperSlide>
-          <div className="h-64 bg-blue-500 flex items-center justify-center text-white text-3xl font-bold">
-            Slide 1
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-64 bg-green-500 flex items-center justify-center text-white text-3xl font-bold">
-            Slide 2
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="h-64 bg-red-500 flex items-center justify-center text-white text-3xl font-bold">
-            Slide 3
-          </div>
-        </SwiperSlide>
       </Swiper>
+      <div className="mt-8 flex justify-center">
+        <Button href="#" filled>Celý kalendář</Button>
+      </div>
     </div>
   );
 };

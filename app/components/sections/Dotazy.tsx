@@ -18,7 +18,7 @@ const Dotazy = () => {
               <div className="collapse-title px-0">
                 <h3>Kdy bude centrum postaveno?</h3>
               </div>
-              <div className="collapse-content px-0">
+              <div className="collapse-content -mt-3 px-0">
                 <p>
                   Stavba centra závisí na získání potřebných povolení a
                   financování. Odhadujeme zahájení stavby v roce 2025.
@@ -30,7 +30,7 @@ const Dotazy = () => {
               <div className="collapse-title px-0">
                 <h3>Jaké aktivity bude centrum nabízet?</h3>
               </div>
-              <div className="collapse-content px-0">
+              <div className="collapse-content -mt-3 px-0">
                 <p>
                   Centrum bude zaměřené na trampolínové sporty, gymnastiku,
                   parkour a kondiční cvičení pro všechny věkové kategorie.
@@ -42,7 +42,7 @@ const Dotazy = () => {
               <div className="collapse-title px-0">
                 <h3>Jak mohu podpořit projekt?</h3>
               </div>
-              <div className="collapse-content px-0">
+              <div className="collapse-content -mt-3 px-0">
                 <p>
                   Můžete nás podpořit sdílením projektu, dobrovolnickou pomocí
                   nebo finančními příspěvky. Kontaktujte nás pro více informací.
@@ -54,7 +54,7 @@ const Dotazy = () => {
               <div className="collapse-title px-0">
                 <h3>Kde získám více informací?</h3>
               </div>
-              <div className="collapse-content px-0">
+              <div className="collapse-content -mt-3 px-0">
                 <p>
                   Více informací najdete na našich webových stránkách nebo nás
                   můžete kontaktovat přímo prostřednictvím kontaktního

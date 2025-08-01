@@ -1,22 +1,41 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  useEffect(() => {
+    const handleScroll = () => {
+      // Nastavte threshold podle výšky hero sekce (např. 100px)
+      const scrollThreshold = window.innerHeight * 0.9;
+      setIsScrolled(window.scrollY > scrollThreshold);
+    };
 
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <nav className={`bg-white shadow-lg rounded-2xl sticky top-0 z-100 sm:mx-16 lg:mx-32 transition-rounded duration-300 ease-in-out ${isMenuOpen ? "rounded-none" : "rounded-2xl"}`}>
+    <nav
+      className={`bg-white shadow-lg rounded-2xl sticky top-0 z-100 transition-rounded duration-300 ease-in-out ${isMenuOpen ? "rounded-none" : "rounded-2xl"} ${isScrolled ? "sm:mx-8 lg:mx-16" : "lg:mx-32 sm:mx-16"}`}
+    >
       <div className="px-6 md:px-8 py-2">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Image src="/images/logo.jpg" alt={"logo"} width={"45"} height={"45"}/>
+            <Image
+              src="/images/logo.jpg"
+              alt={"logo"}
+              width={"45"}
+              height={"45"}
+            />
           </div>
 
           {/* Desktop Menu */}

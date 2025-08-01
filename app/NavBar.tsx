@@ -11,7 +11,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className={`bg-white shadow-lg rounded-2xl relative  sm:mx-16 lg:mx-32 z-50 transition-rounded duration-300 ease-in-out ${isMenuOpen ? "rounded-none" : "rounded-2xl"}`}>
+    <nav className={`bg-white shadow-lg rounded-2xl sticky top-0 z-100 sm:mx-16 lg:mx-32 transition-rounded duration-300 ease-in-out ${isMenuOpen ? "rounded-none" : "rounded-2xl"}`}>
       <div className="px-6 md:px-8 py-2">
         <div className="flex justify-between items-center">
           {/* Logo */}

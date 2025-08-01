@@ -8,20 +8,26 @@ import "swiper/css/pagination";
 import { client, urlFor } from "@/sanity/lib/client";
 import { useEffect, useState } from "react";
 import Button from "../Button";
+import { useAktuality } from "@/app/hooks/useAktuality";
+import { aktualita } from "@/sanity/schemaTypes/aktualita";
 
 const Aktuality = () => {
-  const [aktuality, setAktuality] = useState([]);
+  const { aktuality, loading, error } = useAktuality();
 
-  useEffect(() => {
-    const fetchAktuality = async () => {
-      const data = await client.fetch(`*[_type == "aktualita"]`);
-      console.log("Data ze Sanity:", data); // Pro test
-      setAktuality(data);
-    };
-
-    fetchAktuality();
-  }, []);
-
+  if (loading) {
+    return (
+      <div className="mx-auto">
+        <span className="loading loading-spinner loading-md"></span>
+      </div>
+    );
+  }
+  if (error) {
+    return (
+      <div className="max-w-4xl mx-auto p-8 min-w-0 w-full">
+        <div className="text-center text-red-500">{error}</div>
+      </div>
+    );
+  }
   return (
     <div className="max-w-4xl mx-auto p-8 min-w-0 w-full">
       <Swiper
@@ -46,7 +52,7 @@ const Aktuality = () => {
                 <h3>{aktualita.title || "Bez názvu"}</h3>
                 <p className="line-clamp-4 lg:line-clamp-3">{aktualita.text}</p>
               </div>
-              <Button href="#" filled={false} textWhite>
+              <Button href={`/aktualita/${aktualita._id}`} filled={false} textWhite>
                 Více
               </Button>
             </div>
@@ -54,7 +60,9 @@ const Aktuality = () => {
         ))}
       </Swiper>
       <div className="mt-8 flex justify-center">
-        <Button href="#" filled>Celý kalendář</Button>
+        <Button href="#" filled textBlackOnHover>
+          Celý kalendář
+        </Button>
       </div>
     </div>
   );

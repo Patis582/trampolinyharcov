@@ -11,14 +11,11 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-col gap-44 lg:gap-75 bg-background">
-        <div>
-          <NavBar></NavBar>
-          <Hero />
-        </div>
+        <Hero />
         <CoToJe />
-        <OProjektu/>
+        <OProjektu />
         <Dotazy />
-        <Onas/>
+        <Onas />
         <Prispet />
         <Aktuality />
       </div>

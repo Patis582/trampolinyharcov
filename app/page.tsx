@@ -10,7 +10,7 @@ import NavBar from "./NavBar";
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col gap-44 lg:gap-75 bg-background">
+      <div className="flex flex-col gap-44 lg:gap-75">
         <Hero />
         <CoToJe />
         <OProjektu />

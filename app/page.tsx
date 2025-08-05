@@ -2,6 +2,7 @@ import Aktuality from "./components/sections/Aktuality";
 import CoToJe from "./components/sections/CoToJe";
 import Dotazy from "./components/sections/Dotazy";
 import Footer from "./components/sections/Footer";
+import Galerie from "./components/sections/Galerie";
 import Hero from "./components/sections/Hero";
 import Kontakt from "./components/sections/Kontakt";
 import NasTym from "./components/sections/NasTym";
@@ -21,6 +22,7 @@ export default function Home() {
         <Onas />
         <Prispet />
         <Aktuality />
+        <Galerie />
         <NasTym />
         <Kontakt />
         <Footer />

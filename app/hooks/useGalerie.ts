@@ -14,7 +14,7 @@ interface Galerie {
   _id: string;
   title: string;
   text?: string;
-  thumbnail?: {
+  thumbnail: {
     asset: {
       _ref: string;
       _type: string;

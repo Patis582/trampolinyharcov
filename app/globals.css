@@ -18,7 +18,7 @@
   --font-hind: var(--font-hind);
   --font-montserrat: var(--font-montserrat);
   --color-secondary: var(--secondary);
-
+  --color-contact-icon: #E68387;
 }
 
 html {

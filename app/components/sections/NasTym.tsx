@@ -17,6 +17,7 @@ const NasTym = () => {
             flex: 1;
           }
         `}</style>
+        <h2 className="text-center mb-8 ">Náš tým</h2>
         <Swiper
           modules={[Navigation, Autoplay]}
           loop={true}
@@ -35,7 +36,7 @@ const NasTym = () => {
               slidesPerView: 2,
               spaceBetween: 16,
             },
-            768: {
+            768: { 
               slidesPerView: 3,
               spaceBetween: 16,
             },

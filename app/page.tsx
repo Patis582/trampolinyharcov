@@ -1,7 +1,9 @@
 import Aktuality from "./components/sections/Aktuality";
 import CoToJe from "./components/sections/CoToJe";
 import Dotazy from "./components/sections/Dotazy";
+import Footer from "./components/sections/Footer";
 import Hero from "./components/sections/Hero";
+import Kontakt from "./components/sections/Kontakt";
 import NasTym from "./components/sections/NasTym";
 import Onas from "./components/sections/Onas";
 import OProjektu from "./components/sections/OProjektu";
@@ -20,6 +22,8 @@ export default function Home() {
         <Prispet />
         <Aktuality />
         <NasTym />
+        <Kontakt />
+        <Footer />
       </div>
     </>
   );

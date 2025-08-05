@@ -42,43 +42,43 @@ const NavBar = () => {
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <a
-                href="#"
+                href="#hero"
                 className="text-foreground hover:text-primary rounded-md font-hind text-base transition-colors"
               >
                 Domů
               </a>
               <a
-                href="#"
+                href="#o-nas"
                 className="text-foreground hover:text-primary rounded-md font-hind text-base transition-colors"
               >
                 O nás
               </a>
               <a
-                href="#"
+                href="#projekt"
                 className="text-foreground hover:text-primary rounded-md font-hind text-base transition-colors"
               >
                 Projekt
               </a>
               <a
-                href="#"
+                href="#aktuality"
                 className="text-foreground hover:text-primary rounded-md font-hind text-base transition-colors"
               >
                 Aktuality
               </a>
               <a
-                href="#"
+                href="#galerie"
                 className="text-foreground hover:text-primary rounded-md font-hind text-base transition-colors"
               >
                 Galerie
               </a>
               <a
-                href="#"
+                href="#podporit"
                 className="text-foreground hover:text-primary rounded-md font-hind text-base transition-colors"
               >
                 Možnosti podpory
               </a>
               <a
-                href="#"
+                href="#kontakt"
                 className="text-foreground hover:text-primary font-hind text-base transition-colors"
               >
                 Kontakt
@@ -130,25 +130,43 @@ const NavBar = () => {
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t-2 border-primary shadow-lg rounded-b-2xl ">
           <a
-            href="#"
+            href="#hero"
             className="text-foreground hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition-colors transform hover:translate-x-1"
           >
             Domů
           </a>
           <a
-            href="#"
+            href="#o-nas"
             className="text-foreground hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition-colors transform hover:translate-x-1"
           >
             O nás
           </a>
           <a
-            href="#"
+            href="#o-nas"
             className="text-foreground hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition-colors transform hover:translate-x-1"
           >
-            Služby
+            Projekt
           </a>
           <a
-            href="#"
+            href="#o-nas"
+            className="text-foreground hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition-colors transform hover:translate-x-1"
+          >
+            Aktuality
+          </a>
+          <a
+            href="#o-nas"
+            className="text-foreground hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition-colors transform hover:translate-x-1"
+          >
+            Galerie
+          </a>
+          <a
+            href="#o-nas"
+            className="text-foreground hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition-colors transform hover:translate-x-1"
+          >
+            Možnost podpory
+          </a>
+          <a
+            href="#o-nas"
             className="text-foreground hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition-colors transform hover:translate-x-1"
           >
             Kontakt

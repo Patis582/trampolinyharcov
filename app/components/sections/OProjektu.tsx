@@ -1,5 +1,8 @@
 import Image from "next/image";
 import React from "react";
+import { FaTree } from "react-icons/fa";
+import { FaBuilding } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 
 const OProjektu = () => {
   return (
@@ -12,8 +15,8 @@ const OProjektu = () => {
           height={800}
           className="w-full object-cover rounded-2xl"
         />
-        <div className="h-full flex flex-col justify-center items-center bg-secondary rounded-2xl p-8">
-          <Image src={"/vercel.svg"} alt="ikona" width={82} height={82} />
+        <div className="h-full flex flex-col justify-start items-center bg-secondary rounded-2xl p-8">
+          <FaLocationDot className="text-5xl text-primary" />
           <h3 className="pt-6">Místo</h3>
           <p className="pt-2">
             Místem pro plánovanou stavbu je areál bývalé střelnice v Harcově
@@ -37,7 +40,7 @@ const OProjektu = () => {
           className="w-full object-cover rounded-2xl"
         />
         <div className="h-full flex flex-col justify-center items-center bg-secondary rounded-2xl p-8">
-          <Image src={"/vercel.svg"} alt="ikona" width={82} height={82} />
+          <FaBuilding className="text-5xl text-primary"/>
           <h3 className="pt-6">O centru</h3>
           <p className="pt-2">
             Navrhované sportovní centrum je situováno ve střední části plochy
@@ -66,8 +69,8 @@ const OProjektu = () => {
           height={800}
           className="w-full object-cover rounded-2xl"
         />
-        <div className="h-full flex flex-col justify-center items-center bg-secondary rounded-2xl p-8">
-          <Image src={"/vercel.svg"} alt="ikona" width={82} height={82} />
+        <div className="h-full flex flex-col justify-start items-center bg-secondary rounded-2xl p-8">
+          <FaTree className="text-5xl text-primary"/>
           <h3 className="pt-6">Centrum a okolí</h3>
           <p className="pt-2">
             Předpokládá se využití venkovních ploch pro další sportovní aktivity

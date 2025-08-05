@@ -22,9 +22,9 @@ const Galerie = () => {
       </div>
     );
   }
-  // Funkce pro automatické určení col-span
+
   const getColSpan = (index: number) => {
-    const patterns = [4, 4, 4, 3, 4, 5]; // Pattern pro první 6 karet
+    const patterns = [4, 4, 4, 3, 4, 5]; 
     const patternIndex = index % patterns.length;
     return patterns[patternIndex];
   };

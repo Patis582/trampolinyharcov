@@ -9,7 +9,7 @@ const OProjektu = () => {
     <div className="flex flex-col lg:flex-row lg:px-32 gap-8">
       <div className="flex flex-col px-8 sm:px-16 md:px-32 lg:px-0 gap-8 flex-1">
         <Image
-          src={"/images/hero-background.jpg"}
+          src={"/images/hala6.jpg"}
           alt="fotka"
           width={400}
           height={800}
@@ -33,7 +33,7 @@ const OProjektu = () => {
 
       <div className="flex flex-col lg:flex-col-reverse px-8 sm:px-16 md:px-32 lg:px-0 gap-8 flex-1">
         <Image
-          src={"/images/hero-background.jpg"}
+          src={"/images/interier.jpg"}
           alt="fotka"
           width={400}
           height={800}
@@ -63,7 +63,7 @@ const OProjektu = () => {
 
       <div className="flex flex-col px-8 sm:px-16 md:px-32 lg:px-0 gap-8 flex-1">
         <Image
-          src={"/images/hero-background.jpg"}
+          src={"/images/hala5.jpg"}
           alt="fotka"
           width={400}
           height={800}

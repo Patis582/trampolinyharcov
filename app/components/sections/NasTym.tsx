@@ -36,7 +36,7 @@ const NasTym = () => {
               slidesPerView: 2,
               spaceBetween: 16,
             },
-            768: { 
+            768: {
               slidesPerView: 3,
               spaceBetween: 16,
             },
@@ -45,18 +45,35 @@ const NasTym = () => {
               spaceBetween: 16,
             },
           }}
-          speed={2000}
-          navigation={true}
+          speed={1000}
+          allowTouchMove={true}
+          touchRatio={1}
+          threshold={10}
+          longSwipesRatio={0.1}
+          shortSwipes={true}
+          longSwipes={true}
+          followFinger={true}
+          grabCursor={true}
+          preventClicks={false}
+          preventClicksPropagation={false}
+          slideToClickedSlide={false}
+          navigation={{
+            enabled: true,
+            hideOnClick: false,
+          }}
+          observer={true}
+          observeParents={true}
+          updateOnWindowResize={true}
           className="w-full team-swiper"
         >
           <SwiperSlide>
             <div className="bg-white rounded-2xl flex flex-col items-center text-center p-8 h-full">
               <Image
-                src={"/images/suova.png"}
+                src={"/images/mira.jpg"}
                 alt="tym foto"
                 width={144}
                 height={144}
-                className="mx-auto"
+                className="mx-auto rounded-full w-38 h-38 object-cover object-top"
               />
               <h3 className="mt-4">
                 Miroslav
@@ -75,11 +92,11 @@ const NasTym = () => {
           <SwiperSlide>
             <div className="bg-white rounded-2xl flex flex-col items-center text-center p-8 h-full">
               <Image
-                src={"/images/suova.png"}
+                src={"/images/klarka.jpg"}
                 alt="tym foto"
                 width={144}
                 height={144}
-                className="mx-auto"
+                className="mx-auto rounded-full w-38 h-38 object-cover object-top"
               />
               <h3 className="mt-4">
                 Klára
@@ -98,11 +115,11 @@ const NasTym = () => {
           <SwiperSlide>
             <div className="bg-white rounded-2xl flex flex-col items-center text-center p-8 h-full">
               <Image
-                src={"/images/suova.png"}
+                src={"/images/monca.jpg"}
                 alt="tym foto"
                 width={144}
                 height={144}
-                className="mx-auto"
+                className="mx-auto rounded-full w-38 h-38 object-cover object-top"
               />
               <h3 className="mt-4">
                 Monika
@@ -123,11 +140,11 @@ const NasTym = () => {
           <SwiperSlide>
             <div className="bg-white rounded-2xl flex flex-col items-center text-center p-8 h-full">
               <Image
-                src={"/images/suova.png"}
+                src={"/images/gaba.jpg"}
                 alt="tym foto"
                 width={144}
                 height={144}
-                className="mx-auto"
+                className="mx-auto rounded-full w-38 h-38 object-cover object-top"
               />
               <h3 className="mt-4">
                 Gabriel
@@ -146,11 +163,11 @@ const NasTym = () => {
           <SwiperSlide>
             <div className="bg-white rounded-2xl flex flex-col items-center text-center p-8 h-full">
               <Image
-                src={"/images/suova.png"}
+                src={"/images/suvova.png"}
                 alt="tym foto"
                 width={144}
                 height={144}
-                className="mx-auto"
+                className="mx-auto rounded-full w-38 h-38 object-cover object-top"
               />
               <h3 className="mt-4">
                 Michaela
@@ -166,11 +183,11 @@ const NasTym = () => {
           <SwiperSlide>
             <div className="bg-white rounded-2xl flex flex-col items-center text-center p-8 h-full">
               <Image
-                src={"/images/suova.png"}
+                src={"/images/eliska.jpg"}
                 alt="tym foto"
                 width={144}
                 height={144}
-                className="mx-auto"
+                className="mx-auto rounded-full w-38 h-38 object-cover object-top"
               />
               <h3 className="mt-4">
                 Eliška
@@ -191,11 +208,11 @@ const NasTym = () => {
           <SwiperSlide>
             <div className="bg-white rounded-2xl flex flex-col items-center text-center p-8 h-full">
               <Image
-                src={"/images/suova.png"}
+                src={"/images/kamca.jpg"}
                 alt="tym foto"
                 width={144}
                 height={144}
-                className="mx-auto"
+                className="mx-auto rounded-full w-38 h-38 object-cover object-top"
               />
               <h3 className="mt-4">
                 Kamila
@@ -214,11 +231,11 @@ const NasTym = () => {
           <SwiperSlide>
             <div className="bg-white rounded-2xl flex flex-col items-center text-center p-8 h-full">
               <Image
-                src={"/images/suova.png"}
+                src={"/images/misa.jpg"}
                 alt="tym foto"
                 width={144}
                 height={144}
-                className="mx-auto"
+                className="mx-auto rounded-full w-38 h-38 object-cover object-top"
               />
               <h3 className="mt-4">
                 Michaela

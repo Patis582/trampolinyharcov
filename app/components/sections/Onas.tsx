@@ -5,13 +5,13 @@ import Button from "../Button";
 const Onas = () => {
   return (
     <div className="md:mx-auto max-w-5xl">
-      <div className="flex flex-col md:flex-row mx-8 gap-8 ">
-        <div className="relative w-full aspect-square max-h-84 md:w-1/2 md:h-auto md:max-h-none md:aspect-auto">
+      <div className="flex flex-col md:flex-row mx-8 lg:mx-0 gap-8 ">
+        <div className="relative w-full aspect-square mx-auto lg:mx-0 max-w-96 md:w-1/2 md:h-auto md:max-h-none md:aspect-auto">
           <Image
-            src="/images/hero-background.jpg"
+            src="/images/o-nas.jpg"
             alt="obrazek"
             fill
-            className="object-cover rounded-2xl"
+            className="object-cover rounded-2xl center"
           />
         </div>
         <div className="text-center md:flex md:flex-col md:text-left md:w-1/2">

@@ -4,47 +4,47 @@ import Button from "../Button";
 
 const Prispet = () => {
   return (
-    <div className="flex flex-col gap-16 items-center justify-center px-8 md:flex-row lg:px-32">
-      <div className="rounded-2xl overflow-hidden w-full max-w-lg shadow-md">
+    <div className="flex flex-col gap-16 items-center md:items-stretch justify-center px-8 md:flex-row lg:px-32">
+      <div className="rounded-2xl overflow-hidden w-full max-w-lg shadow-md flex flex-col">
         <Image
-          className="object-cover w-full h-72 lg:h-84 -mb-4"
+          className="object-cover w-full h-72 lg:h-84"
           src={"/images/triko1.jpeg"}
           alt="obrazek"
           width={400}
           height={400}
         />
-        <div className="rounded-2xl bg-white p-6 z-50 relative">
+        <div className="rounded-2xl bg-white p-6 flex-1 flex flex-col">
           <h3>Tričko</h3>
-          <p className="mt-4">
+          <p className="mt-4 flex-1">
             Mám zájem o triko Harcov, přičemž část z jeho ceny půjde na
             projektovou dokumentaci a výstavbu nového Trampolínového a
             pohybového centra v Liberci.
           </p>
-          <div className=" mt-8 flex justify-between">
+          <div className="mt-8 flex justify-between items-center">
             <p className="font-bold text-xl">699 kč</p>
-            <Button href="#" filled={false}>
+            <Button target="_blank" href="https://docs.google.com/forms/d/1sFaS679WSXnz6Vgur25O71lhO-24hllCICnML7ZibR0/preview" filled={false}>
               Koupit
             </Button>
           </div>
         </div>
       </div>
-      <div className="rounded-2xl overflow-hidden w-full max-w-lg shadow-md">
+      <div className="rounded-2xl overflow-hidden w-full max-w-lg shadow-md flex flex-col">
         <Image
-          className="object-cover w-full h-72 lg:h-84 -mb-4"
-          src={"/images/hero-background.jpg"}
+          className="object-contain w-full h-72 lg:h-84"
+          src={"/images/QR_transparentni_ucet.jpg"}
           alt="obrazek"
           width={400}
           height={400}
         />
-        <div className="rounded-2xl bg-white p-6 z-50 relative">
+        <div className="rounded-2xl bg-white p-6 flex-1 flex flex-col">
           <h3>Transparentní účet</h3>
-          <p className="mt-4">
+          <p className="mt-4 flex-1">
             Částka bude použita na projektovou dokumentaci a výstavbu centra
           </p>
-          <div className=" mt-8 flex justify-between">
+          <div className="mt-8 flex justify-between items-center">
             <p className="font-bold text-xl">699 kč</p>
             <Button href="#" filled={false}>
-              Koupit
+              Přispět
             </Button>
           </div>
         </div>

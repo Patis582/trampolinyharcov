@@ -14,7 +14,7 @@ const CoToJe = () => {
           možnosti trénovat v nich je velmi nejistá.
         </p>
       </div>
-      <Button href="#" filled={false}>
+      <Button href="#projekt" filled={false}>
         O projektu
       </Button>
     </div>

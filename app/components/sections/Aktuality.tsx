@@ -60,8 +60,8 @@ const Aktuality = () => {
         ))}
       </Swiper>
       <div className="mt-8 flex justify-center">
-        <Button href="#" filled textBlackOnHover>
-          Celý kalendář
+        <Button href="#galerie" filled textBlackOnHover>
+          Fotky z proběhnutých akcí
         </Button>
       </div>
     </div>

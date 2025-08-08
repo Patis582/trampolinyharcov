@@ -1,5 +1,6 @@
 import { defineType, defineField } from 'sanity'
 import { text } from 'stream/consumers'
+import { media } from 'sanity-plugin-media'
 
 export const galerie = defineType({
     name: 'galerie',
@@ -41,6 +42,8 @@ export const galerie = defineType({
                     type: 'image',
                     options: {
                         hotspot: true,
+                        accept: 'image/*',
+                        sources: ['media'] // Umožní výběr z media library
                     },
                     fields: [
                         {
@@ -48,7 +51,7 @@ export const galerie = defineType({
                             type: 'string',
                             title: 'Alternativní text',
                             description: 'Povinný popis obrázku. Nejlépe dvěmi slovy např. Obrázek harcov',
-                            validation: Rule => Rule.required()
+                            initialValue: 'galerie fotka',
                         }
                     ]
                 }

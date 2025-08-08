@@ -29,14 +29,14 @@ const NavBar = () => {
       <div className="px-6 md:px-8 py-2">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <a href="#hero" className="flex-shrink-0">
             <Image
               src="/images/logo.jpg"
               alt={"logo"}
               width={"45"}
               height={"45"}
             />
-          </div>
+          </a>
 
           {/* Desktop Menu */}
           <div className="hidden lg:block">

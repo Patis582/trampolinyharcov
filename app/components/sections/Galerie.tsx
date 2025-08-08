@@ -2,13 +2,13 @@
 import { useGalerie } from "@/app/hooks/useGalerie";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Galerie = () => {
-  
-    const { loading, error, galerie } = useGalerie();
+  const { loading, error, galerie } = useGalerie();
 
-    if (loading) {
+  if (loading) {
     return (
       <div className="mx-auto">
         <span className="loading loading-spinner loading-md"></span>
@@ -23,22 +23,14 @@ const Galerie = () => {
     );
   }
 
-  const getColSpan = (index: number) => {
-    const patterns = [4, 4, 4, 3, 4, 5]; 
-    const patternIndex = index % patterns.length;
-    return patterns[patternIndex];
-  };
-
   return (
     <div className="px-8 md:px-16 lg:mx-auto max-w-6xl py-16">
       <h2 className="text-center mb-8">Galerie</h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-4 auto-rows-[200px]">
+      <div className="flex flex-wrap gap-4">
         {galerie.map((item, index) => (
-          <div
+          <Link href={"#"}
             key={item._id}
-            className={`bg-gray-300 rounded-xl overflow-hidden relative col-span-${getColSpan(
-              index
-            )}`}
+            className="bg-gray-300 rounded-xl overflow-hidden relative h-[200px] w-full min-w-[250px] max-w-96 mx-auto hover:scale-102 hover:shadow-2xl transition-all"
           >
             <Image
               src={urlFor(item.thumbnail).url()}
@@ -50,7 +42,7 @@ const Galerie = () => {
             <div className="absolute bottom-2 left-2 text-white font-bold px-2 py-1 rounded">
               {item.title}
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

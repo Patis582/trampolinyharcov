@@ -25,7 +25,7 @@ const Onas = () => {
             Franckh<br/> a sám Život..<br/>Naše motto:<br/>"Chovejme se k lidem tak,<br/>jak si
             přejeme, <br/>aby se oni chovali k nám."
           </p>
-          <Button href="#" filled={false}>
+          <Button href="#projekt" filled={false}>
             O projektu
           </Button>
         </div>

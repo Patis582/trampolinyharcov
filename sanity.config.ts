@@ -12,6 +12,7 @@ import {deskTool} from 'sanity/desk'
 import {apiVersion, dataset, projectId} from './sanity/env'
 import {schema} from './sanity/schemaTypes'
 import {structure} from './sanity/structure'
+import { media } from 'sanity-plugin-media'
 
 export default defineConfig({
   basePath: '/studio',
@@ -21,6 +22,7 @@ export default defineConfig({
   schema,
   plugins: [
     deskTool({structure}),
+    media(),
     // Vision is for querying with GROQ from inside the Studio
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({defaultApiVersion: apiVersion}),

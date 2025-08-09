@@ -2,34 +2,63 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleSectionClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    section: string
+  ) => {
+    e.preventDefault();
+
+    if (pathname !== "/") {
+      router.push(`/#${section}`);
+    } else {
+      const element = document.querySelector(`#${section}`);
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
+
+    setIsMenuOpen(false);
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
   useEffect(() => {
     const handleScroll = () => {
-      // Nastavte threshold podle výšky hero sekce (např. 100px)
       const scrollThreshold = window.innerHeight * 0.9;
       setIsScrolled(window.scrollY > scrollThreshold);
     };
 
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <nav
-      className={`bg-white shadow-lg rounded-2xl sticky top-0 z-100 transition-rounded duration-300 ease-in-out ${isMenuOpen ? "rounded-none" : "rounded-2xl"} ${isScrolled ? "sm:mx-8 lg:mx-16" : "lg:mx-32 sm:mx-16"}`}
+      className={`bg-white shadow-lg rounded-2xl sticky top-0 z-100 transition-rounded duration-300 ease-in-out ${
+        isMenuOpen ? "rounded-none" : "rounded-2xl"
+      } ${isScrolled ? "sm:mx-8 lg:mx-16" : "lg:mx-32 sm:mx-16"}`}
     >
       <div className="px-6 md:px-8 py-2">
         <div className="flex justify-between items-center">
-          {/* Logo */}
-          <a href="#hero" className="flex-shrink-0">
+          <a
+            href="#hero"
+            onClick={(e) => handleSectionClick(e, "hero")}
+            className="flex-shrink-0"
+          >
             <Image
               src="/images/logo.jpg"
               alt={"logo"}
@@ -38,47 +67,53 @@ const NavBar = () => {
             />
           </a>
 
-          {/* Desktop Menu */}
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <a
                 href="#hero"
+                onClick={(e) => handleSectionClick(e, "hero")}
                 className="text-foreground hover:text-primary rounded-md font-hind text-base transition-colors"
               >
                 Domů
               </a>
               <a
                 href="#o-nas"
+                onClick={(e) => handleSectionClick(e, "o-nas")}
                 className="text-foreground hover:text-primary rounded-md font-hind text-base transition-colors"
               >
                 O nás
               </a>
               <a
                 href="#projekt"
+                onClick={(e) => handleSectionClick(e, "projekt")}
                 className="text-foreground hover:text-primary rounded-md font-hind text-base transition-colors"
               >
                 Projekt
               </a>
               <a
                 href="#aktuality"
+                onClick={(e) => handleSectionClick(e, "aktuality")}
                 className="text-foreground hover:text-primary rounded-md font-hind text-base transition-colors"
               >
                 Aktuality
               </a>
               <a
                 href="#galerie"
+                onClick={(e) => handleSectionClick(e, "galerie")}
                 className="text-foreground hover:text-primary rounded-md font-hind text-base transition-colors"
               >
                 Galerie
               </a>
               <a
                 href="#podporit"
+                onClick={(e) => handleSectionClick(e, "podporit")}
                 className="text-foreground hover:text-primary rounded-md font-hind text-base transition-colors"
               >
                 Možnosti podpory
               </a>
               <a
                 href="#kontakt"
+                onClick={(e) => handleSectionClick(e, "kontakt")}
                 className="text-foreground hover:text-primary font-hind text-base transition-colors"
               >
                 Kontakt
@@ -86,7 +121,6 @@ const NavBar = () => {
             </div>
           </div>
 
-          {/* Mobile menu button s animovaným hamburgerem */}
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
@@ -95,7 +129,6 @@ const NavBar = () => {
             >
               <span className="sr-only">Otevřít hlavní menu</span>
 
-              {/* Animovaný hamburger */}
               <div className="w-8 h-8 flex flex-col justify-center items-center">
                 <span
                   className={`bg-current block transition-all duration-300 ease-out h-1 w-7 rounded-sm ${
@@ -122,7 +155,6 @@ const NavBar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu s animací výjezdu */}
       <div
         className={`absolute top-full left-0 right-0 lg:hidden overflow-hidden transition-all duration-300 ease-in-out z-40 ${
           isMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
@@ -131,42 +163,49 @@ const NavBar = () => {
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t-2 border-primary shadow-lg rounded-b-2xl ">
           <a
             href="#hero"
+            onClick={(e) => handleSectionClick(e, "hero")}
             className="text-foreground hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition-colors transform hover:translate-x-1"
           >
             Domů
           </a>
           <a
             href="#o-nas"
+            onClick={(e) => handleSectionClick(e, "o-nas")}
             className="text-foreground hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition-colors transform hover:translate-x-1"
           >
             O nás
           </a>
           <a
-            href="#o-nas"
+            href="#projekt"
+            onClick={(e) => handleSectionClick(e, "projekt")}
             className="text-foreground hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition-colors transform hover:translate-x-1"
           >
             Projekt
           </a>
           <a
-            href="#o-nas"
+            href="#aktuality"
+            onClick={(e) => handleSectionClick(e, "aktuality")}
             className="text-foreground hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition-colors transform hover:translate-x-1"
           >
             Aktuality
           </a>
           <a
-            href="#o-nas"
+            href="#galerie"
+            onClick={(e) => handleSectionClick(e, "galerie")}
             className="text-foreground hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition-colors transform hover:translate-x-1"
           >
             Galerie
           </a>
           <a
-            href="#o-nas"
+            href="#podporit"
+            onClick={(e) => handleSectionClick(e, "podporit")}
             className="text-foreground hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition-colors transform hover:translate-x-1"
           >
             Možnost podpory
           </a>
           <a
-            href="#o-nas"
+            href="#kontakt"
+            onClick={(e) => handleSectionClick(e, "kontakt")}
             className="text-foreground hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition-colors transform hover:translate-x-1"
           >
             Kontakt

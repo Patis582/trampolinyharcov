@@ -22,23 +22,22 @@ const Galerie = () => {
       </div>
     );
   }
-
+  //3 4 2
+  //2 4 3
   return (
     <div className="px-8 md:px-16 lg:mx-auto max-w-6xl py-16">
       <h2 className="text-center mb-8">Galerie</h2>
-      <div className="flex flex-wrap gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-9 gap-4">
         {galerie.map((item, index) => (
-          <Link href={"#"}
+          <Link
+            href={`/galerie/${item._id}`}
             key={item._id}
-            className="bg-gray-300 rounded-xl overflow-hidden relative h-[200px] w-full min-w-[250px] max-w-96 mx-auto hover:scale-102 hover:shadow-2xl transition-all"
+            className="bg-gray-300 rounded-xl overflow-hidden relative h-[200px] w-full mx-auto hover:scale-102 hover:shadow-2xl transition-transform transition-shadow duration-300 ease-in-out gallery-item bg-cover bg-center"
+            style={{
+              backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0.1)),
+                            url(${urlFor(item.thumbnail).url()})`,
+            }}
           >
-            <Image
-              src={urlFor(item.thumbnail).url()}
-              alt={item.title}
-              width={250}
-              height={200}
-              className="w-full h-full object-cover"
-            />
             <div className="absolute bottom-2 left-2 text-white font-bold px-2 py-1 rounded">
               {item.title}
             </div>

@@ -23,7 +23,7 @@ const Hero = () => {
             Liberci.
           </p>
         </div>
-          <Button href="#" filled={true}>
+          <Button href="#projekt" filled={true}>
             O projektu
           </Button>
       </div>

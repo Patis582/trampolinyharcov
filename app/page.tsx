@@ -43,7 +43,6 @@ export default function Home() {
       <div id="kontakt">
         <Kontakt />
       </div>
-      <Footer />
     </div>
   );
 }

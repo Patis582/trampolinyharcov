@@ -31,7 +31,27 @@ export const galerie = defineType({
         defineField({
             name: 'odkaz',
             title: 'Pokud chcete odkaz zde',
-            type: 'string'
+            type: 'string',
+            validation: Rule => Rule.custom((value, { document }) => {
+               
+                if (document?.['odkazText'] && !value) {
+                    return 'Vyplňte odkaz, když je vyplněn text k odkazu';
+                }
+                return true;
+            })
+        }),
+        defineField({
+            name: 'odkazText',
+            title: 'text k odkazu',
+            description: 'např: Odkaz na video',
+            type: 'string',
+            validation: Rule => Rule.custom((value, { document }) => {
+                
+                if (document?.odkaz && !value) {
+                    return 'Vyplňte text k odkazu, když je vyplněn odkaz';
+                }
+                return true;
+            })
         }),
         defineField({
             name: 'images',

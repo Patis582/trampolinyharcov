@@ -1,14 +1,13 @@
 @import "tailwindcss";
 @plugin "daisyui";
-@import 'swiper/css';
-@import 'swiper/css/navigation';
-@import 'swiper/css/pagination';
-
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --secondary: #F0F7F7;
+  --secondary: #f0f7f7;
 }
 
 @theme inline {
@@ -18,7 +17,7 @@
   --font-hind: var(--font-hind);
   --font-montserrat: var(--font-montserrat);
   --color-secondary: var(--secondary);
-  --color-contact-icon: #E68387;
+  --color-contact-icon: #e68387;
 }
 
 html {
@@ -40,8 +39,8 @@ body {
   font-weight: normal;
 }
 
-@media screen and (max-width: 768px){
-  body{
+@media screen and (max-width: 768px) {
+  body {
     background-image: url("/images/lines-background--mobile.svg");
   }
 }
@@ -109,4 +108,36 @@ h4 {
 .swiper .swiper-pagination-bullet-active {
   background: #7ab2b2;
   opacity: 1;
+}
+
+.gallery-item:nth-child(6n + 1) {
+  grid-column: span 3;
+}
+.gallery-item:nth-child(6n + 2) {
+  grid-column: span 4;
+}
+.gallery-item:nth-child(6n + 3) {
+  grid-column: span 2;
+}
+
+/* Sudý řádek: 2-4-3 pattern */
+.gallery-item:nth-child(6n + 4) {
+  grid-column: span 2;
+}
+.gallery-item:nth-child(6n + 5) {
+  grid-column: span 4;
+}
+.gallery-item:nth-child(6n + 6) {
+  grid-column: span 3;
+}
+
+@media (max-width: 767px) {
+  .gallery-item:nth-child(6n + 1),
+  .gallery-item:nth-child(6n + 2),
+  .gallery-item:nth-child(6n + 3),
+  .gallery-item:nth-child(6n + 4),
+  .gallery-item:nth-child(6n + 5),
+  .gallery-item:nth-child(6n + 6) {
+    grid-column: span 1;
+  }
 }

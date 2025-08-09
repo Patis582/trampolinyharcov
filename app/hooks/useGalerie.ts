@@ -23,6 +23,7 @@ interface Galerie {
   images: GalerieImage[];
   odkaz?: string;
   publishedAt: string;
+  odkazText?: string;
 }
 
 export const useGalerie = () => {

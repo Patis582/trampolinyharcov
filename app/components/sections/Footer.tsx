@@ -6,7 +6,7 @@ import { FaFacebook } from "react-icons/fa";
 const Footer = () => {
     const currentYear = new Date().getFullYear();
   return (
-    <div className="bg-[#333333]">
+    <div className="bg-[#333333] mt-44 lg:mt-75">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d6497.906346120883!2d15.0957564!3d50.7765288!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTDCsDQ2JzM2LjMiTiAxNcKwMDUnNTMuMiJF!5e1!3m2!1scs!2scz!4v1754383375152!5m2!1scs!2scz"
         width="600"

@@ -8,6 +8,8 @@ import Kontakt from "./components/sections/Kontakt";
 import NasTym from "./components/sections/NasTym";
 import Onas from "./components/sections/Onas";
 import OProjektu from "./components/sections/OProjektu";
+import Parametry from "./components/sections/Parametry";
+import Prezentace from "./components/sections/Prezentace";
 import Prispet from "./components/sections/Prispet";
 
 export default function Home() {
@@ -21,6 +23,9 @@ export default function Home() {
       </div>
       <div id="projekt">
         <OProjektu />
+      </div>
+      <div>
+        <Prezentace/>
       </div>
       <div id="dotazy">
         <Dotazy />

@@ -25,6 +25,7 @@ const Galerie = () => {
   //3 4 2
   //2 4 3
   return (
+    
     <div className="px-8 md:px-16 lg:mx-auto max-w-6xl py-16">
       <h2 className="text-center mb-8">Galerie</h2>
       <div className="grid grid-cols-2 md:grid-cols-9 gap-4">

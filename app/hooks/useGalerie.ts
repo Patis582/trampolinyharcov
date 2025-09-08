@@ -47,6 +47,7 @@ export const useGalerie = () => {
               alt
             },
             odkaz,
+            odkazText,
             publishedAt
           }
         `);

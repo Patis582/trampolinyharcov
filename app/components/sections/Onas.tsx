@@ -18,9 +18,19 @@ const Onas = () => {
           <h2 className="mb-4">O nás</h2>
           <p className="mb-8">
             Klára a Miroslav Patrmanovi. Společně provozujeme dvě sportovní
-            centra v Liberci. Míra je u &quot;trampolín&quot; už od roku 2012,
-            kdy začal s tréninky ve Slovanu Liberec a postupně se vypracoval na
-            úroveň trenéra &quot;A&quot; licence.
+            centra v Liberci. Míra je u trampolín již přes 50 let. (závodník,
+            trenér, reprezentační trenér, hlavní trenér oddílu Trampolíny
+            Liberec) Podporu máme i v našich dětech, které již samy vedou další
+            generaci ke zdravému pohybu a radosti z něj. Naši inspirací jsou Dan
+            Millman, Tomáš Baťa, Pierre Franckh
+            <br /> a sám Život..
+            <br />
+            Naše motto:
+            <br />
+            &quot;Chovejme se k lidem tak,
+            <br />
+            jak si přejeme, <br />
+            aby se oni chovali k nám.&quot;
           </p>
           <Button href="#projekt" filled={false}>
             O projektu

@@ -37,7 +37,7 @@ const Aktuality = () => {
         modules={[Navigation, Pagination]}
         className="rounded-xl overflow-hidden"
       >
-        {aktuality.map((aktualita: any) => (
+        {aktuality.map((aktualita) => (
           <SwiperSlide key={aktualita._id}>
             <div
               className="h-96 flex items-start justify-end flex-col gap-4 text-white bg-cover bg-center px-12 md:px-16 py-8"
@@ -50,7 +50,11 @@ const Aktuality = () => {
                 <h3>{aktualita.title || "Bez názvu"}</h3>
                 <p className="line-clamp-4 lg:line-clamp-3">{aktualita.text}</p>
               </div>
-              <Button href={`/aktualita/${aktualita._id}`} filled={false} textWhite>
+              <Button
+                href={`/aktualita/${aktualita._id}`}
+                filled={false}
+                textWhite
+              >
                 Více
               </Button>
             </div>

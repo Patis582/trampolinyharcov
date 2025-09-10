@@ -5,11 +5,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { client, urlFor } from "@/sanity/lib/client";
-import { useEffect, useState } from "react";
+import { urlFor } from "@/sanity/lib/client";
 import Button from "../Button";
 import { useAktuality } from "@/app/hooks/useAktuality";
-import { aktualita } from "@/sanity/schemaTypes/aktualita";
 
 const Aktuality = () => {
   const { aktuality, loading, error } = useAktuality();

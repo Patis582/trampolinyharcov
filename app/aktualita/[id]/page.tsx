@@ -6,7 +6,7 @@ import Image from "next/image";
 import { urlFor } from "@/sanity/lib/client";
 import Link from "next/link";
 
-export default function page() {
+export default function Page() {
   const params = useParams();
   const id = params.id as string;
 

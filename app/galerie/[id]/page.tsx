@@ -15,7 +15,7 @@ import "lightgallery/css/lg-thumbnail.css";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
 
-export default function page() {
+export default function Page() {
   const params = useParams();
   const id = params.id as string;
   const [isClient, setIsClient] = useState(false);
@@ -108,6 +108,7 @@ export default function page() {
           <p>
             {selectedGalerie.odkazText}{" "}
             <a
+
               href={selectedGalerie.odkaz}
               target="_blank"
               rel="noopener noreferrer"

@@ -1,14 +1,12 @@
 import Aktuality from "./components/sections/Aktuality";
 import CoToJe from "./components/sections/CoToJe";
 import Dotazy from "./components/sections/Dotazy";
-import Footer from "./components/sections/Footer";
 import Galerie from "./components/sections/Galerie";
 import Hero from "./components/sections/Hero";
 import Kontakt from "./components/sections/Kontakt";
 import NasTym from "./components/sections/NasTym";
 import Onas from "./components/sections/Onas";
 import OProjektu from "./components/sections/OProjektu";
-import Parametry from "./components/sections/Parametry";
 import Prezentace from "./components/sections/Prezentace";
 import Prispet from "./components/sections/Prispet";
 

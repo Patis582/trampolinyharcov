@@ -156,60 +156,65 @@ const NavBar = () => {
       </div>
 
       <div
-        className={`absolute top-full left-0 right-0 lg:hidden overflow-hidden transition-all duration-300 ease-in-out z-40 ${
-          isMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
+        id="mobile-menu"
+        className={`lg:hidden fixed inset-x-4 top-[64px] z-40 transform transition-all duration-300 ease-out ${
+          isMenuOpen
+            ? "translate-y-0 opacity-100 pointer-events-auto"
+            : "-translate-y-3 opacity-0 pointer-events-none"
         }`}
       >
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t-2 border-primary shadow-lg rounded-b-2xl ">
-          <a
-            href="#hero"
-            onClick={(e) => handleSectionClick(e, "hero")}
-            className="text-foreground hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition-colors transform hover:translate-x-1"
-          >
-            Domů
-          </a>
-          <a
-            href="#o-nas"
-            onClick={(e) => handleSectionClick(e, "o-nas")}
-            className="text-foreground hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition-colors transform hover:translate-x-1"
-          >
-            O nás
-          </a>
-          <a
-            href="#projekt"
-            onClick={(e) => handleSectionClick(e, "projekt")}
-            className="text-foreground hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition-colors transform hover:translate-x-1"
-          >
-            Projekt
-          </a>
-          <a
-            href="#aktuality"
-            onClick={(e) => handleSectionClick(e, "aktuality")}
-            className="text-foreground hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition-colors transform hover:translate-x-1"
-          >
-            Aktuality
-          </a>
-          <a
-            href="#galerie"
-            onClick={(e) => handleSectionClick(e, "galerie")}
-            className="text-foreground hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition-colors transform hover:translate-x-1"
-          >
-            Galerie
-          </a>
-          <a
-            href="#podporit"
-            onClick={(e) => handleSectionClick(e, "podporit")}
-            className="text-foreground hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition-colors transform hover:translate-x-1"
-          >
-            Možnost podpory
-          </a>
-          <a
-            href="#kontakt"
-            onClick={(e) => handleSectionClick(e, "kontakt")}
-            className="text-foreground hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition-colors transform hover:translate-x-1"
-          >
-            Kontakt
-          </a>
+        <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-100 overflow-auto max-h-[calc(100vh-88px)]">
+          <div className="px-3 py-4 space-y-1">
+            <a
+              href="#hero"
+              onClick={(e) => handleSectionClick(e, "hero")}
+              className="block px-4 py-3 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-gray-50 transition-colors transform hover:translate-x-1"
+            >
+              Domů
+            </a>
+            <a
+              href="#o-nas"
+              onClick={(e) => handleSectionClick(e, "o-nas")}
+              className="block px-4 py-3 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-gray-50 transition-colors transform hover:translate-x-1"
+            >
+              O nás
+            </a>
+            <a
+              href="#projekt"
+              onClick={(e) => handleSectionClick(e, "projekt")}
+              className="block px-4 py-3 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-gray-50 transition-colors transform hover:translate-x-1"
+            >
+              Projekt
+            </a>
+            <a
+              href="#aktuality"
+              onClick={(e) => handleSectionClick(e, "aktuality")}
+              className="block px-4 py-3 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-gray-50 transition-colors transform hover:translate-x-1"
+            >
+              Aktuality
+            </a>
+            <a
+              href="#galerie"
+              onClick={(e) => handleSectionClick(e, "galerie")}
+              className="block px-4 py-3 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-gray-50 transition-colors transform hover:translate-x-1"
+            >
+              Galerie
+            </a>
+            <a
+              href="#podporit"
+              onClick={(e) => handleSectionClick(e, "podporit")}
+              className="block px-4 py-3 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-gray-50 transition-colors transform hover:translate-x-1"
+            >
+              Možnost podpory
+            </a>
+            <a
+              href="#kontakt"
+              onClick={(e) => handleSectionClick(e, "kontakt")}
+              className="block px-4 py-3 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-gray-50 transition-colors transform hover:translate-x-1"
+            >
+              Kontakt
+            </a>
+          </div>
         </div>
       </div>
     </nav>

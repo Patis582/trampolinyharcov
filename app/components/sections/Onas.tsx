@@ -32,9 +32,11 @@ const Onas = () => {
             jak si přejeme, <br />
             aby se oni chovali k nám.&quot;
           </p>
-          <Button href="#projekt" filled={false}>
-            O projektu
-          </Button>
+          <div className="flex justify-center md:justify-start">
+            <Button href="#projekt" filled={false}>
+              O projektu
+            </Button>
+          </div>
         </div>
       </div>
     </div>

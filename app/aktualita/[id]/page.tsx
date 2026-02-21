@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useAktuality } from "@/app/hooks/useAktuality";
+import { useAktualitaById } from "@/app/hooks/useAktualitaById";
 import { useParams } from "next/navigation";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
@@ -10,9 +10,7 @@ export default function Page() {
   const params = useParams();
   const id = params.id as string;
 
-  const { aktuality, error, loading } = useAktuality();
-
-  const aktualita = aktuality.find((item) => id === item._id);
+  const { aktualita, error, loading } = useAktualitaById(id);
 
   if (loading) {
     return (

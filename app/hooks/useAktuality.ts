@@ -1,14 +1,6 @@
 import { useEffect, useState } from "react";
 import { client } from "@/sanity/lib/client";
-import { SanityImageObject } from '@sanity/image-url/lib/types/types';
-
-interface Aktualita {
-  _id: string;
-  title: string;
-  text: string;
-  image?: SanityImageObject;
-  publishedAt: string;
-}
+import { Aktualita } from "@/app/types";
 
 export const useAktuality = () => {
   const [aktuality, setAktuality] = useState<Aktualita[]>([]);

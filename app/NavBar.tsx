@@ -4,6 +4,17 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 
+// Centralizovaná definice navigačních položek
+const NAV_ITEMS = [
+  { href: "hero", label: "Domů" },
+  { href: "o-nas", label: "O nás" },
+  { href: "projekt", label: "Projekt" },
+  { href: "aktuality", label: "Aktuality" },
+  { href: "galerie", label: "Galerie" },
+  { href: "podporit", label: "Možnosti podpory" },
+  { href: "kontakt", label: "Kontakt" },
+] as const;
+
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -12,7 +23,7 @@ const NavBar = () => {
 
   const handleSectionClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    section: string
+    section: string,
   ) => {
     e.preventDefault();
 
@@ -69,55 +80,16 @@ const NavBar = () => {
 
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <a
-                href="#hero"
-                onClick={(e) => handleSectionClick(e, "hero")}
-                className="text-foreground hover:text-primary rounded-md font-hind text-base transition-colors"
-              >
-                Domů
-              </a>
-              <a
-                href="#o-nas"
-                onClick={(e) => handleSectionClick(e, "o-nas")}
-                className="text-foreground hover:text-primary rounded-md font-hind text-base transition-colors"
-              >
-                O nás
-              </a>
-              <a
-                href="#projekt"
-                onClick={(e) => handleSectionClick(e, "projekt")}
-                className="text-foreground hover:text-primary rounded-md font-hind text-base transition-colors"
-              >
-                Projekt
-              </a>
-              <a
-                href="#aktuality"
-                onClick={(e) => handleSectionClick(e, "aktuality")}
-                className="text-foreground hover:text-primary rounded-md font-hind text-base transition-colors"
-              >
-                Aktuality
-              </a>
-              <a
-                href="#galerie"
-                onClick={(e) => handleSectionClick(e, "galerie")}
-                className="text-foreground hover:text-primary rounded-md font-hind text-base transition-colors"
-              >
-                Galerie
-              </a>
-              <a
-                href="#podporit"
-                onClick={(e) => handleSectionClick(e, "podporit")}
-                className="text-foreground hover:text-primary rounded-md font-hind text-base transition-colors"
-              >
-                Možnosti podpory
-              </a>
-              <a
-                href="#kontakt"
-                onClick={(e) => handleSectionClick(e, "kontakt")}
-                className="text-foreground hover:text-primary font-hind text-base transition-colors"
-              >
-                Kontakt
-              </a>
+              {NAV_ITEMS.map((item) => (
+                <a
+                  key={item.href}
+                  href={`#${item.href}`}
+                  onClick={(e) => handleSectionClick(e, item.href)}
+                  className="text-foreground hover:text-primary rounded-md font-hind text-base transition-colors"
+                >
+                  {item.label}
+                </a>
+              ))}
             </div>
           </div>
 
@@ -165,55 +137,16 @@ const NavBar = () => {
       >
         <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-100 overflow-auto max-h-[calc(100vh-88px)]">
           <div className="px-3 py-4 space-y-1 font-bold">
-            <a
-              href="#hero"
-              onClick={(e) => handleSectionClick(e, "hero")}
-              className="block px-4 py-3 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-gray-50 transition-colors transform hover:translate-x-1"
-            >
-              Domů
-            </a>
-            <a
-              href="#o-nas"
-              onClick={(e) => handleSectionClick(e, "o-nas")}
-              className="block px-4 py-3 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-gray-50 transition-colors transform hover:translate-x-1"
-            >
-              O nás
-            </a>
-            <a
-              href="#projekt"
-              onClick={(e) => handleSectionClick(e, "projekt")}
-              className="block px-4 py-3 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-gray-50 transition-colors transform hover:translate-x-1"
-            >
-              Projekt
-            </a>
-            <a
-              href="#aktuality"
-              onClick={(e) => handleSectionClick(e, "aktuality")}
-              className="block px-4 py-3 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-gray-50 transition-colors transform hover:translate-x-1"
-            >
-              Aktuality
-            </a>
-            <a
-              href="#galerie"
-              onClick={(e) => handleSectionClick(e, "galerie")}
-              className="block px-4 py-3 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-gray-50 transition-colors transform hover:translate-x-1"
-            >
-              Galerie
-            </a>
-            <a
-              href="#podporit"
-              onClick={(e) => handleSectionClick(e, "podporit")}
-              className="block px-4 py-3 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-gray-50 transition-colors transform hover:translate-x-1"
-            >
-              Možnost podpory
-            </a>
-            <a
-              href="#kontakt"
-              onClick={(e) => handleSectionClick(e, "kontakt")}
-              className="block px-4 py-3 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-gray-50 transition-colors transform hover:translate-x-1"
-            >
-              Kontakt
-            </a>
+            {NAV_ITEMS.map((item) => (
+              <a
+                key={item.href}
+                href={`#${item.href}`}
+                onClick={(e) => handleSectionClick(e, item.href)}
+                className="block px-4 py-3 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-gray-50 transition-colors transform hover:translate-x-1"
+              >
+                {item.label}
+              </a>
+            ))}
           </div>
         </div>
       </div>

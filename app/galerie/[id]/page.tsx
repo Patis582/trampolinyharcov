@@ -1,5 +1,5 @@
 "use client";
-import { useGalerie } from "@/app/hooks/useGalerie";
+import { useGalerieById } from "@/app/hooks/useGalerieById";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import { useParams } from "next/navigation";
@@ -19,8 +19,7 @@ export default function Page() {
   const id = params.id as string;
   const [isClient, setIsClient] = useState(false);
 
-  const { loading, error, galerie } = useGalerie();
-  const selectedGalerie = galerie.find((item) => id === item._id);
+  const { loading, error, galerie } = useGalerieById(id);
 
   useEffect(() => {
     setIsClient(true);
@@ -51,7 +50,7 @@ export default function Page() {
     );
   }
 
-  if (!selectedGalerie) {
+  if (!galerie) {
     return (
       <div className="max-w-4xl mx-auto p-8 min-w-0 w-full">
         <div className="text-center text-red-500">Galerie nebyla nalezena</div>
@@ -68,13 +67,13 @@ export default function Page() {
     return (
       <div className="mt-16 mx-8 lg:mx-auto max-w-7xl">
         <div className="text-center mb-8">
-          <h1>{selectedGalerie.title}</h1>
-          {selectedGalerie.text && <p>{selectedGalerie.text}</p>}
-          {selectedGalerie.odkazText && selectedGalerie.odkaz && (
+          <h1>{galerie.title}</h1>
+          {galerie.text && <p>{galerie.text}</p>}
+          {galerie.odkazText && galerie.odkaz && (
             <p>
-              {selectedGalerie.odkazText}{" "}
+              {galerie.odkazText}{" "}
               <a
-                href={selectedGalerie.odkaz}
+                href={galerie.odkaz}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary font-bold hover:underline"
@@ -101,13 +100,13 @@ export default function Page() {
       </div>
 
       <div className="text-center mb-8">
-        <h1>{selectedGalerie.title}</h1>
-        {selectedGalerie.text && <p>{selectedGalerie.text}</p>}
-        {selectedGalerie.odkazText && selectedGalerie.odkaz && (
+        <h1>{galerie.title}</h1>
+        {galerie.text && <p>{galerie.text}</p>}
+        {galerie.odkazText && galerie.odkaz && (
           <p>
-            {selectedGalerie.odkazText}{" "}
+            {galerie.odkazText}{" "}
             <a
-              href={selectedGalerie.odkaz}
+              href={galerie.odkaz}
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary font-bold hover:underline"
@@ -118,14 +117,14 @@ export default function Page() {
         )}
       </div>
 
-      {selectedGalerie.images && selectedGalerie.images.length > 0 ? (
+      {galerie.images && galerie.images.length > 0 ? (
         <LightGallery
           onInit={onInit}
           speed={500}
           plugins={[lgThumbnail, lgZoom]}
           elementClassNames="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2"
         >
-          {selectedGalerie.images.map((image, index) => {
+          {galerie.images.map((image, index) => {
             if (!image || !image.asset || !image.asset._ref) {
               return null;
             }

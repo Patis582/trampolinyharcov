@@ -10,8 +10,31 @@ import "swiper/css/pagination";
 
 const Prispet = () => {
   return (
-    <div className="flex flex-col gap-16 items-center md:items-stretch justify-center px-8 md:flex-row lg:px-32">
-      <div className="rounded-2xl overflow-hidden w-full max-w-md shadow-md flex flex-col">
+    <div className="flex flex-col gap-12 lg:gap-16 items-center lg:px-32">
+      <div className="max-w-4xl text-center flex flex-col gap-6">
+        <h2 className="text-center">Možnosti podpory</h2>
+        <p className="text-lg">
+          Váš dar nebo partnerství nám pomůže vybudovat moderní zázemí pro sport v Liberci. 
+          Každý příspěvek nás posouvá blíže k cíli.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4 text-left">
+          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+            <h4 className="font-bold mb-2">Finanční podpora</h4>
+            <p className="text-sm">Libovolný příspěvek na náš transparentní účet na podporu výstavby a provozu centra.</p>
+          </div>
+          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+            <h4 className="font-bold mb-2">Banner v halách</h4>
+            <p className="text-sm">Pro firmy nabízíme možnost umístění reklamního banneru v našich stávajících i nových halách.</p>
+          </div>
+          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+            <h4 className="font-bold mb-2">Zakoupení trika</h4>
+            <p className="text-sm">Podpořte nás zakoupením stylového trička Harcov. Část výtěžku jde přímo na projekt.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-16 items-center md:items-stretch justify-center w-full md:flex-row">
+        <div className="rounded-2xl overflow-hidden w-full max-w-md shadow-md flex flex-col">
         <Swiper
           modules={[Autoplay]}
           loop={true}
@@ -90,6 +113,7 @@ const Prispet = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

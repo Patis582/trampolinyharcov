@@ -163,26 +163,6 @@ const NasTym = () => {
           <SwiperSlide>
             <div className="bg-white rounded-2xl flex flex-col items-center text-center p-8 h-full">
               <Image
-                src={"/images/suvova.png"}
-                alt="tym foto"
-                width={144}
-                height={144}
-                className="mx-auto rounded-full w-38 h-38 object-cover object-top"
-              />
-              <h3 className="mt-4">
-                Michaela
-                <br />
-                Sůvová
-              </h3>
-              <p className="mt-2">
-                Komunikace
-                <br />s partenry
-              </p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="bg-white rounded-2xl flex flex-col items-center text-center p-8 h-full">
-              <Image
                 src={"/images/eliska.jpg"}
                 alt="tym foto"
                 width={144}

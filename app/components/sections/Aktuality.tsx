@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { urlFor } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
 import Button from "../Button";
 import { useAktuality } from "@/app/hooks/useAktuality";
 
@@ -43,8 +43,10 @@ const Aktuality = () => {
             <div
               className="h-96 flex items-start justify-end flex-col gap-4 text-white bg-cover bg-center px-12 md:px-16 py-8"
               style={{
-                backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.3)),
-                url(${urlFor(aktualita.image).url()})`,
+                backgroundImage: aktualita.image
+                  ? `linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.3)),
+                url(${urlFor(aktualita.image).url()})`
+                  : `linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.3))`,
               }}
             >
               <div>

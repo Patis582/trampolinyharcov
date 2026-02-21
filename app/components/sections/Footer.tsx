@@ -4,7 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
-    const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
   return (
     <div className="bg-[#333333] mt-44 lg:mt-75">
       <iframe
@@ -18,13 +18,38 @@ const Footer = () => {
         className="w-full"
       ></iframe>
       <div className="flex justify-between max-w-5xl px-8 py-4 lg:px-0 text-white mx-auto items-center">
-        <a href=""><Image src={"/images/Logo-removebg.png"} alt="logo" width={50} height={50}/></a>
-        
+        <a href="">
+          <Image
+            src={"/images/Logo-removebg.png"}
+            alt="logo"
+            width={50}
+            height={50}
+          />
+        </a>
+
         <p>&copy; {currentYear} Trampolíny Liberec</p>
         <div className="flex gap-2">
-            <a target="_blank" href="https://www.facebook.com/trampolinypatrman/?locale=cs_CZ"><FaFacebook /></a>
-            <a target="_blank" href="https://www.instagram.com/trampolinypatrman?utm_source=ig_web_button_share_sheet"><FaInstagram /></a>
-            <a target="_blank" href="https://www.instagram.com/trampoliny_liberec?utm_source=ig_web_button_share_sheet"><FaInstagram /></a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.facebook.com/trampolinypatrman/?locale=cs_CZ"
+          >
+            <FaFacebook />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.instagram.com/trampolinypatrman?utm_source=ig_web_button_share_sheet"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.instagram.com/trampoliny_liberec?utm_source=ig_web_button_share_sheet"
+          >
+            <FaInstagram />
+          </a>
         </div>
       </div>
     </div>

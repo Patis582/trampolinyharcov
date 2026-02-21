@@ -41,6 +41,7 @@ const Kontakt = () => {
           <a
             className="hover:text-primary transition-colors"
             target="_blank"
+            rel="noopener noreferrer"
             href="https://www.google.com/maps/place/50%C2%B046'36.3%22N+15%C2%B005'53.2%22E/@50.7765288,15.0957564,1031m/data=!3m1!1e3!4m4!3m3!8m2!3d50.7767436!4d15.0981189?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
           >
             Liberec Harcov (bývalá střelnice Harcov) 50.7767436N, 15.0981189E
@@ -69,10 +70,16 @@ const Kontakt = () => {
             <MdEmail className="text-contact-icon text-2xl" />
             <h3>Email</h3>
           </div>
-          <a className="hover:text-primary transition-colors" href="">
+          <a
+            className="hover:text-primary transition-colors"
+            href="mailto:kpatrmanova@gmail.com"
+          >
             kpatrmanova@gmail.com
           </a>
-          <a className="hover:text-primary transition-colors" href="">
+          <a
+            className="hover:text-primary transition-colors"
+            href="mailto:mirapatrman@gmail.com"
+          >
             mirapatrman@gmail.com
           </a>
         </div>

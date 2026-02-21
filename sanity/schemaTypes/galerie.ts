@@ -1,6 +1,4 @@
 import { defineType, defineField } from 'sanity'
-import { text } from 'stream/consumers'
-import { media } from 'sanity-plugin-media'
 
 export const galerie = defineType({
     name: 'galerie',

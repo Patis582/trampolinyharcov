@@ -1,6 +1,6 @@
 "use client";
 import { useGalerie } from "@/app/hooks/useGalerie";
-import { urlFor } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -10,7 +10,6 @@ import LightGallery from "lightgallery/react";
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
-
 
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
@@ -23,13 +22,12 @@ export default function Page() {
   const { loading, error, galerie } = useGalerie();
   const selectedGalerie = galerie.find((item) => id === item._id);
 
-  
   useEffect(() => {
     setIsClient(true);
   }, []);
 
   const onInit = () => {
-    console.log("lightGallery has been initialized");
+    // LightGallery initialized
   };
 
   if (loading) {
@@ -66,7 +64,6 @@ export default function Page() {
     );
   }
 
-
   if (!isClient) {
     return (
       <div className="mt-16 mx-8 lg:mx-auto max-w-7xl">
@@ -78,7 +75,9 @@ export default function Page() {
               {selectedGalerie.odkazText}{" "}
               <a
                 href={selectedGalerie.odkaz}
-                className="text-primary font-bold"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary font-bold hover:underline"
               >
                 Zde
               </a>
@@ -108,7 +107,6 @@ export default function Page() {
           <p>
             {selectedGalerie.odkazText}{" "}
             <a
-
               href={selectedGalerie.odkaz}
               target="_blank"
               rel="noopener noreferrer"
@@ -120,7 +118,6 @@ export default function Page() {
         )}
       </div>
 
-
       {selectedGalerie.images && selectedGalerie.images.length > 0 ? (
         <LightGallery
           onInit={onInit}
@@ -129,7 +126,6 @@ export default function Page() {
           elementClassNames="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2"
         >
           {selectedGalerie.images.map((image, index) => {
-           
             if (!image || !image.asset || !image.asset._ref) {
               return null;
             }

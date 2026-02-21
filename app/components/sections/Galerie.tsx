@@ -31,7 +31,7 @@ const Galerie = () => {
           <Link
             href={`/galerie/${item._id}`}
             key={item._id}
-            className="bg-gray-300 rounded-xl overflow-hidden relative h-[200px] w-full mx-auto hover:scale-102 hover:shadow-2xl transition-transform transition-shadow duration-300 ease-in-out gallery-item"
+            className="bg-gray-300 rounded-xl overflow-hidden relative h-[200px] w-full mx-auto hover:scale-102 hover:shadow-2xl transition-all duration-300 ease-in-out gallery-item"
           >
             <Image
               src={urlFor(item.thumbnail).url()}

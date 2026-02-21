@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import React from "react";
 import Button from "../Button";
@@ -82,8 +82,8 @@ const Prispet = () => {
           <p className="mt-4 flex-1">
             Částka bude použita na projektovou dokumentaci a výstavbu centra
           </p>
-          <div className="mt-8 flex justify-between items-center">
-            <p className="font-bold text-xl">699 kč</p>
+          <div className="mt-8 flex justify-end items-center">
+            {/* TODO: Doplnit URL transparentního účtu */}
             <Button href="#" filled={false}>
               Přispět
             </Button>

@@ -37,7 +37,7 @@ const Prezentace = () => {
 
         <Button
           filled={false}
-          href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGcGuwreUU&#x2F;pnYFAFgJo1VFtTXkHKaKuw&#x2F;view?utm_content=DAGcGuwreUU&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link"
+          href="https://www.canva.com/design/DAGcGuwreUU/pnYFAFgJo1VFtTXkHKaKuw/view?utm_content=DAGcGuwreUU&utm_campaign=designshare&utm_medium=embeds&utm_source=link"
           target="_blank"
         >
           Otevřít v novém okně
@@ -55,7 +55,6 @@ const Prezentace = () => {
           </div>
         </div>
       </div>
-    
     </div>
   );
 };

@@ -3,7 +3,7 @@ import React from "react";
 import { useAktuality } from "@/app/hooks/useAktuality";
 import { useParams } from "next/navigation";
 import Image from "next/image";
-import { urlFor } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
 import Link from "next/link";
 
 export default function Page() {

@@ -29,8 +29,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Trampolíny Harčov",
+  title: "Trampolíny Harcov",
   description: "Moderní sportovní centrum zaměřené na skoky na trampolíně",
+ 
 };
 
 export default function RootLayout({

@@ -164,7 +164,7 @@ const NavBar = () => {
         }`}
       >
         <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-100 overflow-auto max-h-[calc(100vh-88px)]">
-          <div className="px-3 py-4 space-y-1">
+          <div className="px-3 py-4 space-y-1 font-bold">
             <a
               href="#hero"
               onClick={(e) => handleSectionClick(e, "hero")}

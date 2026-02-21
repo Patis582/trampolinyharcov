@@ -7,7 +7,7 @@ const Hero = () => {
     <div className="-mt-8 sm:mx-8 relative h-[80vh] overflow-hidden sm:rounded-4xl">
       {/* Hlavní LCP obrázek */}
       <Image
-        src="/images/hero-background.webp"
+        src="/images/hero-background.jpg"
         alt="Trampolíny Harcov - Moderní sportovní centrum"
         fill
         priority

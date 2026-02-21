@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 
 const Prispet = () => {
   return (
-    <div className="flex flex-col gap-12 lg:gap-16 items-center lg:px-32">
+    <div className="flex flex-col gap-12 lg:gap-16 items-center lg:px-32 px-8">
       <div className="max-w-4xl text-center flex flex-col gap-6">
         <h2 className="text-center">Možnosti podpory</h2>
         <p className="text-lg">

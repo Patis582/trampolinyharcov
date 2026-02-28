@@ -52,8 +52,8 @@ const Prispet = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-16 items-center md:items-stretch justify-center w-full md:flex-row">
-        <div className="rounded-2xl overflow-hidden w-full max-w-md shadow-md flex flex-col">
+      <div className="flex flex-col gap-20 items-center md:items-stretch justify-center w-full md:flex-row">
+        <div className="rounded-2xl overflow-hidden w-full max-w-md shadow-md-modern card-hover flex flex-col bg-white">
           <Swiper
             modules={[Autoplay]}
             loop={true}
@@ -68,7 +68,7 @@ const Prispet = () => {
               <Image
                 className="object-cover w-full h-72 lg:h-84"
                 src={"/images/triko1.jpeg"}
-                alt="obrazek"
+                alt="Tričko Harcov - barevné provedení 1"
                 width={400}
                 height={400}
               />
@@ -77,7 +77,7 @@ const Prispet = () => {
               <Image
                 className="object-cover w-full h-72 lg:h-84"
                 src={"/images/triko2.jpeg"}
-                alt="obrazek"
+                alt="Tričko Harcov - barevné provedení 2"
                 width={400}
                 height={400}
               />
@@ -86,47 +86,54 @@ const Prispet = () => {
               <Image
                 className="object-cover w-full h-72 lg:h-84"
                 src={"/images/triko3.jpeg"}
-                alt="obrazek"
+                alt="Tričko Harcov - barevné provedení 3"
                 width={400}
                 height={400}
               />
             </SwiperSlide>
           </Swiper>
-          <div className="rounded-2xl bg-white p-6 flex-1 flex flex-col">
-            <h3>Tričko</h3>
-            <p className="mt-4 flex-1">
-              Mám zájem o triko Harcov, přičemž část z jeho ceny půjde na
-              projektovou dokumentaci a výstavbu nového Trampolínového a
-              pohybového centra v Liberci.
+          <div className="p-8 flex-1 flex flex-col">
+            <h3 className="mb-2">Tričko Harcov</h3>
+            <p className="mt-4 flex-1 text-gray-700 leading-relaxed">
+              Podpořte projekt zakoupením stylového trička. Část z každé nákupu
+              jde přímo na výstavbu nového Trampolínového a pohybového centra v
+              Liberci.
             </p>
-            <div className="mt-8 flex justify-between items-center">
-              <p className="font-bold text-xl">699 kč</p>
+            <div className="mt-8 flex justify-between items-center gap-4 pt-4 border-t border-gray-100">
+              <div>
+                <p className="text-gray-600 text-sm mb-1">Cena za kus</p>
+                <p className="font-bold text-2xl text-primary">699 kč</p>
+              </div>
               <Button
                 target="_blank"
                 href="https://docs.google.com/forms/d/1sFaS679WSXnz6Vgur25O71lhO-24hllCICnML7ZibR0/preview"
-                filled={false}
+                filled={true}
               >
                 Koupit
               </Button>
             </div>
           </div>
         </div>
-        <div className="rounded-2xl overflow-hidden w-full max-w-md shadow-md flex flex-col">
-          <Image
-            className="object-contain w-full h-72 lg:h-84"
-            src={"/images/QR_transparentni_ucet.jpg"}
-            alt="obrazek"
-            width={400}
-            height={400}
-          />
-          <div className="rounded-2xl bg-white p-6 flex-1 flex flex-col">
-            <h3>Transparentní účet</h3>
-            <p className="mt-4 flex-1">
-              Částka bude použita na projektovou dokumentaci a výstavbu centra
+
+        <div className="rounded-2xl overflow-hidden w-full max-w-md shadow-md-modern card-hover flex flex-col bg-white">
+          <div className="bg-primary/5 p-8 h-72 lg:h-84 flex items-center justify-center">
+            <Image
+              className="object-contain w-full h-full max-w-xs"
+              src={"/images/QR_transparentni_ucet.jpg"}
+              alt="QR kód pro překlad na transparentní účet"
+              width={400}
+              height={400}
+            />
+          </div>
+          <div className="p-8 flex-1 flex flex-col">
+            <h3 className="mb-2">Transparentní účet</h3>
+            <p className="mt-4 flex-1 text-gray-700 leading-relaxed">
+              Pošlete libovolný příspěvek. Každá koruna pomáhá realizovat
+              projekt a vybudovat moderní centrum.
             </p>
-            <div className="mt-8 flex justify-end items-center">
+            <div className="mt-8 flex justify-end pt-4 border-t border-gray-100">
               {/* TODO: Doplnit URL transparentního účtu */}
-              <Button href="#" filled={false}>
+              <Button href="#" filled={true}>
                 Přispět
               </Button>
             </div>

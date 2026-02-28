@@ -17,7 +17,7 @@ const NasTym = () => {
             flex: 1;
           }
         `}</style>
-        <h2 className="text-center mb-8 ">Náš tým</h2>
+        <h2 className="text-center mb-12">Náš tým</h2>
         <Swiper
           modules={[Navigation, Autoplay]}
           loop={true}
@@ -67,25 +67,27 @@ const NasTym = () => {
           className="w-full team-swiper"
         >
           <SwiperSlide>
-            <div className="bg-white rounded-2xl flex flex-col items-center text-center p-8 h-full">
-              <Image
-                src={"/images/mira.jpg"}
-                alt="tym foto"
-                width={144}
-                height={144}
-                className="mx-auto rounded-full w-38 h-38 object-cover object-top"
-              />
-              <h3 className="mt-4">
+            <div className="bg-white rounded-2xl flex flex-col items-center text-center p-8 h-full shadow-md-modern card-hover">
+              <div className="relative w-38 h-38 mb-4">
+                <Image
+                  src={"/images/mira.jpg"}
+                  alt="Miroslav Patrman - Hlavní trenér"
+                  width={144}
+                  height={144}
+                  className="rounded-full w-full h-full object-cover object-top"
+                />
+              </div>
+              <h3 className="text-lg font-semibold">
                 Miroslav
                 <br />
                 Patrman
               </h3>
-              <p className="mt-2">
+              <p className="mt-3 text-sm text-gray-700">
                 Hlavní trenér oddílu
                 <br />
-                Vizionář a
-                <br />
-                koordinátor projektu
+                <span className="text-primary font-medium">
+                  Vizionář projektu
+                </span>
               </p>
             </div>
           </SwiperSlide>

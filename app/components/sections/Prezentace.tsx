@@ -4,16 +4,16 @@ import Button from "../Button";
 
 const Prezentace = () => {
   return (
-    <div className="text-center">
-      <div className="text-center mb-6">
-        <h2 className="mb-2">Prezentace projektu</h2>
-        <p className="text-gray-600 flex items-center justify-center gap-2">
-          <FaPlay />
-          Klikněte pro zobrazení interaktivní prezentace
+    <div className="text-center px-8">
+      <div className="text-center mb-12">
+        <h2 className="mb-4">Prezentace projektu</h2>
+        <p className="text-gray-700 flex items-center justify-center gap-2 text-lg">
+          <FaPlay className="text-primary" />
+          Projděte si interaktivní prezentaci projektu
         </p>
       </div>
-      <div className="px-8 sm:px-16 md:px-32 lg:px-32 lg:mx-auto max-w-7xl mb-8">
-        <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg border-4 border-secondary">
+      <div className="lg:mx-auto max-w-5xl mb-12">
+        <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg-modern border border-gray-200">
           <iframe
             loading="lazy"
             className="absolute inset-0 w-full h-full border-none"
@@ -23,16 +23,15 @@ const Prezentace = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
         <Button
-          filled
+          filled={true}
           href="/assets/prezentace-trampoliny-harcov.pdf"
           target="_blank"
           download
-          textBlackOnHover
         >
           <FaDownload className="mr-2" />
-          Prezentace ke stažení
+          Stáhnout PDF
         </Button>
 
         <Button
@@ -45,13 +44,22 @@ const Prezentace = () => {
       </div>
 
       {/* Additional info */}
-      <div className="mt-8 max-w-2xl mx-auto">
-        <div className="bg-gray-50 p-4 rounded-lg">
-          <h3 className="font-semibold mb-2">Co najdete v prezentaci:</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-gray-600">
-            <div>📍 Umístění projektu</div>
-            <div>🏗️ Plány stavby</div>
-            <div>💰 Rozpočet a financování</div>
+      <div className="max-w-2xl mx-auto">
+        <div className="bg-primary/5 p-8 rounded-2xl border border-primary/10">
+          <h3 className="font-semibold mb-4 text-lg">V prezentaci najdete:</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-700">
+            <div className="flex flex-col items-center gap-3">
+              <span className="text-3xl">📍</span>
+              <span className="font-medium">Umístění projektu</span>
+            </div>
+            <div className="flex flex-col items-center gap-3">
+              <span className="text-3xl">🏗️</span>
+              <span className="font-medium">Architektonické návrhy</span>
+            </div>
+            <div className="flex flex-col items-center gap-3">
+              <span className="text-3xl">💰</span>
+              <span className="font-medium">Rozpočet a finance</span>
+            </div>
           </div>
         </div>
       </div>

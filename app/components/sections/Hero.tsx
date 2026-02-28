@@ -16,31 +16,36 @@ const Hero = () => {
         className="object-cover"
       />
 
-      {/* Gradienty pro čitelnost textu */}
+      {/* Gradienty pro čitelnost textu - zlepšený kontrast */}
       <div
         className="absolute inset-0 z-1 pointer-events-none"
         style={{
           background: `
-            linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2)),
-            linear-gradient(to bottom right, rgba(0,0,0,0.2), rgba(0,0,0,0))
+            linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 60%),
+            linear-gradient(to top, rgba(0,0,0,0.4), transparent)
           `,
         }}
       />
 
       {/* Obsah hero sekce */}
-      <div className="relative z-10 w-full h-full px-8 lg:px-32 flex flex-col justify-center gap-8">
-        <div>
-          <h1 className="text-white mb-2">Trampoliny Harcov</h1>
-          <p className="text-white max-w-lg">
+      <div className="relative z-10 w-full h-full px-8 lg:px-32 flex flex-col justify-center gap-10">
+        <div className="max-w-2xl">
+          <h1 className="text-white mb-4 font-bold">Trampoliny Harcov</h1>
+          <p className="text-white/95 max-w-lg text-lg leading-relaxed">
             V Harcově brzy vyroste moderní sportovní centrum zaměřené na skoky
             na trampolíně a další pohybové aktivity. Přidejte se k nám, podpořte
             výstavbu nebo se zapojte do tréninků v našich stávajících halách v
             Liberci.
           </p>
         </div>
-        <Button href="#projekt" filled={true}>
-          O projektu
-        </Button>
+        <div className="flex gap-4 flex-wrap">
+          <Button href="#projekt" filled={true}>
+            O projektu
+          </Button>
+          <Button href="#podporit" filled={false} textWhite={true}>
+            Podpořit
+          </Button>
+        </div>
       </div>
     </div>
   );

@@ -57,8 +57,8 @@ const Dotazy = () => {
               <div className="collapse-content px-6 pb-4 pt-2">
                 <p className="text-gray-700 leading-relaxed pl-8">
                   Můžete nás podpořit sdílením projektu, dobrovolnickou pomocí
-                  nebo finančními příspěvky. Navštivte sekci "Možnosti podpory"
-                  pro víc informací.
+                  nebo finančními příspěvky. Navštivte sekci &quot;Možnosti
+                  podpory&quot; pro víc informací.
                 </p>
               </div>
             </div>
@@ -71,8 +71,8 @@ const Dotazy = () => {
               </div>
               <div className="collapse-content px-6 pb-4 pt-2">
                 <p className="text-gray-700 leading-relaxed pl-8">
-                  Více informací najdete v sekci "O projektu" nebo nás můžete
-                  kontaktovat přímo v sekci "Kontakt".
+                  Více informací najdete v sekci &quot;O projektu&quot; nebo nás
+                  můžete kontaktovat přímo v sekci &quot;Kontakt&quot;.
                 </p>
               </div>
             </div>

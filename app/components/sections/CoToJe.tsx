@@ -23,7 +23,7 @@ const CoToJe = () => {
             Více o projektu
           </Button>
           <Button href="#o-nas" filled={false}>
-            Náš tým
+            O nás
           </Button>
         </div>
       </div>

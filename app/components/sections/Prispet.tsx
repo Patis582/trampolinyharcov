@@ -4,6 +4,7 @@ import React from "react";
 import Button from "../Button";
 import { SwiperSlide, Swiper } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import { FaHandHoldingHeart, FaSignal, FaShirt } from "react-icons/fa6";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -17,24 +18,33 @@ const Prispet = () => {
           Váš dar nebo partnerství nám pomůže vybudovat moderní zázemí pro sport
           v Liberci. Každý příspěvek nás posouvá blíže k cíli.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4 text-left">
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-            <h4 className="font-bold mb-2">Finanční podpora</h4>
-            <p className="text-sm">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 text-left">
+          <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg hover:border-primary transition-all duration-300 flex flex-col items-center text-center">
+            <div className="text-5xl text-primary mb-4">
+              <FaHandHoldingHeart />
+            </div>
+            <h4 className="font-bold mb-3 text-base">Finanční podpora</h4>
+            <p className="text-sm text-gray-600 flex-1">
               Libovolný příspěvek na náš transparentní účet na podporu výstavby
               a provozu centra.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-            <h4 className="font-bold mb-2">Banner v halách</h4>
-            <p className="text-sm">
+          <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg hover:border-primary transition-all duration-300 flex flex-col items-center text-center">
+            <div className="text-5xl text-primary mb-4">
+              <FaSignal />
+            </div>
+            <h4 className="font-bold mb-3 text-base">Banner v halách</h4>
+            <p className="text-sm text-gray-600 flex-1">
               Pro firmy nabízíme možnost umístění reklamního banneru v našich
               stávajících i nových halách.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-            <h4 className="font-bold mb-2">Zakoupení trika</h4>
-            <p className="text-sm">
+          <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg hover:border-primary transition-all duration-300 flex flex-col items-center text-center">
+            <div className="text-5xl text-primary mb-4">
+              <FaShirt />
+            </div>
+            <h4 className="font-bold mb-3 text-base">Zakoupení trika</h4>
+            <p className="text-sm text-gray-600 flex-1">
               Podpořte nás zakoupením stylového trička Harcov. Část výtěžku jde
               přímo na projekt.
             </p>

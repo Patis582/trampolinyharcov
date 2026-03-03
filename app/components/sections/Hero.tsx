@@ -30,7 +30,7 @@ const Hero = () => {
       {/* Obsah hero sekce */}
       <div className="relative z-10 w-full h-full px-8 lg:px-32 flex flex-col justify-center gap-10">
         <div className="max-w-2xl">
-          <h1 className="text-white mb-4 font-bold">Trampoliny Harcov</h1>
+          <h1 className="text-white mb-4 font-bold">Trampolíny Harcov</h1>
           <p className="text-white/95 max-w-lg text-lg leading-relaxed">
             V Harcově brzy vyroste moderní sportovní centrum zaměřené na skoky
             na trampolíně a další pohybové aktivity. Přidejte se k nám, podpořte

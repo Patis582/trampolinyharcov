@@ -32,7 +32,7 @@ const Hero = () => {
         <div className="max-w-2xl">
           <h1 className="text-white mb-4 font-bold">Trampolíny Harcov</h1>
           <p className="text-white/95 max-w-lg text-lg leading-relaxed">
-            V Harcově brzy vyroste moderní sportovní centrum zaměřené na skoky
+            V Harcově plánujeme vybudovat moderní sportovní centrum zaměřené na skoky
             na trampolíně a další pohybové aktivity. Přidejte se k nám, podpořte
             výstavbu nebo se zapojte do tréninků v našich stávajících halách v
             Liberci.

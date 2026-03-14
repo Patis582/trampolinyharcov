@@ -43,7 +43,7 @@ const Prezentace = () => {
         </Button>
       </div>
 
-      {/* Additional info */}
+      {/* Additional info 
       <div className="max-w-2xl mx-auto">
         <div className="bg-primary/5 p-8 rounded-2xl border border-primary/10">
           <h3 className="font-semibold mb-4 text-lg">V prezentaci najdete:</h3>
@@ -63,6 +63,7 @@ const Prezentace = () => {
           </div>
         </div>
       </div>
+      */}
     </div>
   );
 };

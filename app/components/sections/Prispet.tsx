@@ -133,8 +133,8 @@ const Prispet = () => {
             </p>
             <div className="mt-8 flex justify-end pt-4 border-t border-gray-100">
               {/* TODO: Doplnit URL transparentního účtu */}
-              <Button href="/QR_transparentni_ucet.jpg" filled={true} target="_blank">
-                Přispět
+              <Button href="/images/INFO_transparentni_ucet_FIN.jpg" filled={true} target="_blank">
+                Více informací
               </Button>
             </div>
           </div>

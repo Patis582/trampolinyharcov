@@ -29,7 +29,7 @@ const Dotazy = () => {
               <div className="collapse-content px-6 pb-4 pt-2">
                 <p className="text-gray-700 leading-relaxed pl-8">
                   Stavba centra závisí na získání potřebných povolení a
-                  financování. Odhadujeme zahájení stavby v roce 2025.
+                  financování.
                 </p>
               </div>
             </div>

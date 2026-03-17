@@ -174,7 +174,7 @@ const NasTym = () => {
               <h3 className="mt-4">
                 Eliška
                 <br />
-                Patrmanová
+                Zuzánková
               </h3>
               <p className="mt-2">
                 Fyzioterapeutka

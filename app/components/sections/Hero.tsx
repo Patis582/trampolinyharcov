@@ -30,13 +30,9 @@ const Hero = () => {
       {/* Obsah hero sekce */}
       <div className="relative z-10 w-full h-full px-8 lg:px-32 flex flex-col justify-center gap-10">
         <div className="max-w-2xl">
-          <h1 className="text-white mb-4 font-bold">Trampolíny Harcov</h1>
+          <h1 className="text-white mb-4 font-bold">Sportovní areál Harcov</h1>
           <p className="text-white/95 max-w-lg text-lg leading-relaxed">
-            V Harcově plánujeme vybudovat moderní sportovní centrum zaměřené na skoky
-            na trampolíně a další pohybové aktivity. Přidejte se k nám, podpořte
-            výstavbu nebo se zapojte do tréninků v našich stávajících halách v
-            Liberci.
-          </p>
+            V Liberci - Harcově tvoříme sportovní areál pro širokou veřejnost, jehož součástí budou venkovní prvky pro pohybové aktivity (volejbal, basket, workout, trampolína, slackline...) a v budoucnu také Trampolínové a pohybové centrum zaměřené na gymnastiku, parkour a trampolíny.</p>
         </div>
         <div className="flex gap-4 flex-wrap">
           <Button href="#projekt" filled={true}>
